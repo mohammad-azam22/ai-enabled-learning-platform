@@ -1,1 +1,2 @@
-# ai-enabled-learning-platform
+# AI Enabled Learning Platform
+This readme file will be updated soon...
