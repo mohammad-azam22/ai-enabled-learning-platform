@@ -1,0 +1,241 @@
+/* ============================ */
+/* ============Header========== */
+/* ============================ */
+header {
+    height: calc(max(10vh, 7rem));
+    background-color: var(--color-accent);
+}
+
+header .content {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #header-logo a {
+    font-size: 3rem;
+}
+
+header #header-buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header #header-buttons button {
+    height: 4rem;
+    aspect-ratio: 1 / 1;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    background: none;
+    cursor: pointer;
+}
+
+header #header-buttons img {
+    height: 3rem;
+    width: 3rem;
+    place-self: center;
+}
+
+/* ============================ */
+/* ============Main============ */
+/* ============================ */
+
+main {
+    height: 80vh;
+    overflow-y: auto;
+}
+
+main .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .content .left {
+    width: 20%;
+    height: 100%;
+    border: var(--border-width) solid #000000;
+}
+
+main .content .left .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .left .buttons button {
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--color-bg);
+    border: none;
+    border-bottom: var(--border-width) solid #000000;
+}
+
+main .content .left .buttons button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .content .left .buttons #message {
+    width: 85%;
+    padding: 1rem;
+    margin: 2rem auto;
+    text-align: center;
+    border-radius: var(--border-radius);
+    opacity: 0.7;
+    display: none;
+}
+
+main .content .right {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+main .content .right .workarea {
+    width: 80%;
+    min-height: 80%;
+    margin: 2rem;
+    padding: 2rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+main .content .right .workarea #user-info-form {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .content .right .workarea #user-info-form label {
+    position: absolute;
+    left: -999999px;
+}
+
+main .content .right .workarea #user-info-form input,
+main .content .right .workarea #user-info-form select {
+    width: 80%;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main .content .right .workarea #user-info-form button {
+    height: 5rem;
+    width: 10rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    background-color: var(--color-btn-green);
+    cursor: pointer;
+}
+
+main .content .right .workarea #user-info-form button:hover {
+    background-color: var(--color-btn-green-hover);
+}
+
+main .content .right .workarea #message {
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+
+}
+
+main .content .right .workarea #change-password-form {
+    margin: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .content .right .workarea #change-password-form label {
+    position: absolute;
+    left: -999999px;
+}
+
+main .content .right .workarea #change-password-form input {
+    width: 80%;
+    height: 5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main .content .right .workarea #change-password-form button {
+    height: 5rem;
+    width: 10rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    background-color: var(--color-btn-green);
+    cursor: pointer;
+}
+
+main .content .right .workarea #change-password-form button:hover {
+    background-color: var(--color-btn-green-hover);
+}
+
+main .content .right .workarea div {
+    display: flex;
+    justify-content: center;
+}
+
+main .content .right .workarea #del-account-btn {
+    height: 5rem;
+    width: 12rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    background-color: var(--color-btn-red);
+    cursor: pointer;
+}
+
+main .content .right .workarea #del-account-btn:hover {
+    background-color: var(--color-btn-red-hover);
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+
+    <!-- Title and Favicon -->
+    <title>Cognito Learn | Home</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="content">
+            <div id="header-logo">
+                <a href="/" class="link logo" aria-label="Cognito Learn">Cognito Learn</a>
+            </div>
+            <div class="search" aria-label="Search Form">
+                <form action="/search">
+                    <label for="query">Search Query:</label>
+                    <input type="text" name="query" placeholder="Search..." id="query" tabindex="0">
+                    <button type="submit" tabindex="1"><img src="/images/search.png" alt="search"></button>
+                </form>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a class="link" href="/student/signup">For Students</a></li>
+                    <li><a class="link" href="/instructor/signup">For Educators</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="content">
+                <div class="left">
+                    <p>
+                        Discover a world of knowledge at <strong>Cognito Learn</strong>. Our diverse courses, powered by
+                        innovative
+                        technology, empower you to master new skills and achieve your learning goals. Start your journey
+                        today!
+                    </p>
+                    <button onclick="window.location.href='/student/login';">Get Started!</button>
+                </div>
+                <div class="right">
+                    <div class="hero-image image1">
+                        <img id="hero-1" src="/images/hero-1.svg" alt="study">
+                    </div>
+                    <div class="hero-image image2">
+                        <img id="hero-2" src="/images/hero-2.svg" alt="study">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="courses">
+            <div class="content">
+                <div class="heading">
+                    <h2>Browse Courses</h2>
+                </div>
+                <div class="tags">
+                    <button id="tags-scroll-left" class="scroll-btn" onclick="scroll_left(this)"><img src="/images/left-arrow.png"
+                            alt="scroll left"></button>
+                    <div class="list">
+                        <ul id="tags-list">
+                            <li><button class="tag" onclick="get_tag_courses('all')">All</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('c')">C</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('c-sharp')">C#</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('c++')">C++</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('python')">Python</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('java')">Java</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('html')">HTML</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('css')">CSS</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('javascript')">JavaScript</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('react.js')">React</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('machine learning')">Machine Learning</button></li>
+                            <li><button class="tag" onclick="get_tag_courses('mathematics')">Mathematics</button></li>
+                        </ul>
+                    </div>
+                    <button id="tags-scroll-right" class="scroll-btn" onclick="scroll_right(this)"><img src="/images/left-arrow.png"
+                            alt="scroll right"></button>
+                </div>
+                <div class="cards">
+                    <button id="courses-scroll-left" class="scroll-btn" onclick="scroll_left(this)"><img src="/images/left-arrow.png"
+                            alt="scroll left"></button>
+                    <div class="list">
+                        <div id="list">
+                        </div>
+                    </div>
+                    <button id="courses-scroll-right" class="scroll-btn" onclick="scroll_right(this)"><img src="/images/left-arrow.png"
+                            alt="scroll right"></button>
+                </div>
+            </div>
+        </section>
+        <section id="trending">
+            <div class="content">
+                <div class="heading">
+                    <h2>Trending Courses</h2>
+                </div>
+                <div class="cards">
+                </div>
+            </div>
+        </section>
+        <section id="features">
+            <div class="content">
+                <div class="top">
+                    <div class="heading">
+                        <h2>Features</h2>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <div class="feature" onclick="describe_feature(0)">
+                            <div class="image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Personalized Learning Paths</h3>
+                            </div>
+                        </div>
+                        <div class="feature" onclick="describe_feature(1)">
+                            <div class="image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Dynamic AI-Powered Assessments</h3>
+                            </div>
+                        </div>
+                        <div class="feature" onclick="describe_feature(2)">
+                            <div class="image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Intelligent Query Resolution</h3>
+                            </div>
+                        </div>
+                        <div class="feature" onclick="describe_feature(3)">
+                            <div class="image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Comprehensive Progress Tracking</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="description">
+                            <p>Discover a learning journey tailored just for you. Our platform utilizes intelligent
+                                pre-assessments to understand your existing knowledge and goals. Based on this, we
+                                generate a unique learning path, guiding you through the most relevant content at your
+                                own pace, ensuring efficient and effective skill development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <div class="content">
+                <div class="top">
+                    <div class="heading">
+                        <h2>Testimonials</h2>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <button id="testimonials-scroll-left" class="scroll-btn" onclick="scroll_left(this)"><img src="/images/left-arrow.png"
+                            alt="scroll left"></button>
+                    <div class="testimonials">
+                        <div id="testimonials-list">
+                            <div class="testimonial">
+                                <div class="card-top">
+                                    <svg id="backdrop" fill="#d9d9d9" height="80px" width="80px" version="1.1"
+                                        id="Icons" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M13,11c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5s-2.2-5-5-5c-0.3,0-0.7,0-1,0.1
+		C9.3,11.8,11,11,13,11z" />
+                                            <path d="M23,13c-0.3,0-0.7,0-1,0.1c1.3-1.3,3-2.1,5-2.1c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5
+		S25.8,13,23,13z" />
+                                        </g>
+                                    </svg>
+                                    <p>
+                                        Cognito Learn has truly transformed the way I learn. The course content is
+                                        engaging and easy to follow, and the instructors are incredibly knowledgeable. I
+                                        feel much more confident in my skills now. Thank you!
+                                    </p>
+                                </div>
+
+                                <div class="card-bottom">
+                                    <svg width="5rem" height="4rem" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="4rem" height="4rem" fill="none"></rect>
+                                        <circle cx="2rem" cy="2rem" r="2rem" fill="blue"></circle>
+                                        <text x="2rem" y="2.5rem" font-size="16" font-family="Poppins, sans-serif" text-anchor="middle" fill="white">E</text>
+                                    </svg>
+                                    <span>Emily Carter</span>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="card-top">
+                                    <svg id="backdrop" fill="#d9d9d9" height="80px" width="80px" version="1.1"
+                                        id="Icons" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M13,11c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5s-2.2-5-5-5c-0.3,0-0.7,0-1,0.1
+		C9.3,11.8,11,11,13,11z" />
+                                            <path d="M23,13c-0.3,0-0.7,0-1,0.1c1.3-1.3,3-2.1,5-2.1c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5
+		S25.8,13,23,13z" />
+                                        </g>
+                                    </svg>
+                                    <p>
+                                        The personalized learning experience here is fantastic. The pre-assessment
+                                        helped me focus on the areas I needed the most help with. The AI-powered support
+                                        answered my questions quickly. Highly recommended!
+                                    </p>
+                                </div>
+                                <div class="card-bottom ">
+                                    <svg width="5rem" height="4rem" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="4rem" height="4rem" fill="none"></rect>
+                                        <circle cx="2rem" cy="2rem" r="2rem" fill="green"></circle>
+                                        <text x="2rem" y="2.5rem" font-size="16" font-family="Poppins, sans-serif" text-anchor="middle" fill="white">J</text>
+                                    </svg>
+                                    <span>John Miller</span>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="card-top">
+                                    <svg id="backdrop" fill="#d9d9d9" height="80px" width="80px" version="1.1"
+                                        id="Icons" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M13,11c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5s-2.2-5-5-5c-0.3,0-0.7,0-1,0.1
+		C9.3,11.8,11,11,13,11z" />
+                                            <path d="M23,13c-0.3,0-0.7,0-1,0.1c1.3-1.3,3-2.1,5-2.1c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5
+		S25.8,13,23,13z" />
+                                        </g>
+                                    </svg>
+                                    <p>
+                                        I appreciate the flexibility of Cognito Learn. I can learn at my own pace
+                                        and fit the courses around my busy schedule. The community forum is also a great
+                                        place to connect with other learners.
+                                    </p>
+                                </div>
+                                <div class="card-bottom ">
+                                    <svg width="5rem" height="4rem" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="4rem" height="4rem" fill="none"></rect>
+                                        <circle cx="2rem" cy="2rem" r="2rem" fill="orange"></circle>
+                                        <text x="2rem" y="2.5rem" font-size="16" font-family="Poppins, sans-serif" text-anchor="middle" fill="white">Y</text>
+                                    </svg>
+                                    <span>Yusra Khan</span>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="card-top">
+                                    <svg id="backdrop" fill="#d9d9d9" height="80px" width="80px" version="1.1"
+                                        id="Icons" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M13,11c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5s-2.2-5-5-5c-0.3,0-0.7,0-1,0.1
+		C9.3,11.8,11,11,13,11z" />
+                                            <path d="M23,13c-0.3,0-0.7,0-1,0.1c1.3-1.3,3-2.1,5-2.1c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5
+		S25.8,13,23,13z" />
+                                        </g>
+                                    </svg>
+                                    <p>
+                                        Excellent platform for acquiring new skills! The courses are well-structured,
+                                        and the learning materials are top-notch. I've already seen a positive impact on
+                                        my career prospects thanks to Cognito Learn.
+                                    </p>
+                                </div>
+                                <div class="card-bottom ">
+                                    <svg width="5rem" height="4rem" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="4rem" height="4rem" fill="none"></rect>
+                                        <circle cx="2rem" cy="2rem" r="2rem" fill="pink"></circle>
+                                        <text x="2rem" y="2.5rem" font-size="16" font-family="Poppins, sans-serif" text-anchor="middle" fill="white">L</text>
+                                    </svg>
+                                    <span>Lisa Baker</span>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="card-top">
+                                    <svg id="backdrop" fill="#d9d9d9" height="80px" width="80px" version="1.1"
+                                        id="Icons" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M13,11c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5s-2.2-5-5-5c-0.3,0-0.7,0-1,0.1
+		C9.3,11.8,11,11,13,11z" />
+                                            <path d="M23,13c-0.3,0-0.7,0-1,0.1c1.3-1.3,3-2.1,5-2.1c0.6,0,1-0.4,1-1s-0.4-1-1-1c-5,0-9,4-9,9c0,2.8,2.2,5,5,5s5-2.2,5-5
+		S25.8,13,23,13z" />
+                                        </g>
+                                    </svg>
+                                    <p>
+                                        I was initially hesitant about online learning, but Cognito Learn made it a
+                                        breeze. The interactive elements and clear explanations kept me motivated
+                                        throughout the course. A fantastic resource!
+                                    </p>
+                                </div>
+                                <div class="card-bottom ">
+                                    <svg width="5rem" height="4rem" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="4rem" height="4rem" fill="none"></rect>
+                                        <circle cx="2rem" cy="2rem" r="2rem" fill="purple"></circle>
+                                        <text x="2rem" y="2.5rem" font-size="16" font-family="Poppins, sans-serif" text-anchor="middle" fill="white">M</text>
+                                    </svg>
+                                    <span>Mark Johnson</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="testimonials-scroll-right" class="scroll-btn" onclick="scroll_right(this)"><img src="/images/left-arrow.png"
+                            alt="scroll right"></button>
+                </div>
+            </div>
+        </section>
+        <section id="faqs"></section>
+    </main>
+    <footer class="footer">
+        <div class="content">
+            <div class="left">
+                <ul>
+                    <li><a href="/" class="link">Home</a></li>
+                    <li><a href="/about" class="link">About</a></li>
+                    <li><a href="/contact" class="link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/terms_of_service" class="link">Terms of Service</a></li>
+                    <li><a href="/sitemap" class="link">Sitemap</a></li>
+                    <li><a href="/privacy_policy" class="link">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/home.js"></script>
+</body>
+
+</html>

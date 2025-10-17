@@ -1,0 +1,243 @@
+/* ============================ */
+/* ==========Header============ */
+/* ============================ */
+.header {
+    width: 100%;
+    height: calc(min(10vh, 8rem));
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    color: var(--text-color);
+    font-size: 3rem;
+}
+
+/* ============================ */
+/* =========Course Info======== */
+/* ============================ */
+#course-info {
+    padding: 5rem 0;
+}
+
+#course-info .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#course-info .content h2 {
+    font-size: 2.5rem;
+}
+
+#course-info-table th,
+#course-info-table td{
+    padding: 1rem;
+    text-align: left;
+    border: var(--border-width) solid #000000;
+}
+
+#course-info-table th {
+    font-weight: bold;
+}
+
+
+/* ============================ */
+/* ======Course Performance==== */
+/* ============================ */
+#course-performance {
+    padding: 5rem 0;
+}
+
+#course-performance .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#course-performance .content h2 {
+    font-size: 2.5rem;
+}
+
+#course-performance .chart .top {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#course-performance .chart .top form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#course-performance .chart .top label {
+    position: absolute;
+    left: -999999px;
+}
+
+#course-performance .chart .top form select,
+#course-performance .chart .top button {
+    width: 20rem;
+    height: 4rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+#course-performance .chart .top button {
+    background-color: var(--color-btn);
+}
+
+#course-performance .chart .top button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+#course-performance .chart .bottom {
+    width: 100%;
+    min-height: 40rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* ============================ */
+/* =====Student Demographics=== */
+/* ============================ */
+#student-demographics {
+    padding: 5rem 0;
+}
+
+#student-demographics .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#student-demographics .content h2 {
+    font-size: 2.5rem;
+}
+
+#student-demographics .content .chart{
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+#student-demographics .content .chart #gender-dist,
+#student-demographics .content .chart #age-dist {
+    min-height: 40rem;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================ */
+/* =====Course Engagement====== */
+/* ============================ */
+#course-engagement {
+    padding: 5rem 0;
+}
+
+#course-engagement .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#course-engagement .content h2 {
+    font-size: 2.5rem;
+}
+
+#course-engagement .content .chart{
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+#course-engagement .content .chart #course-comp,
+#course-engagement .content .chart #review-rating {
+    min-height: 40rem;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#course-engagement .content > button {
+    width: 20rem;
+    height: 4rem;
+    margin: 5rem 0 2rem 0;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    background-color: var(--color-btn);
+}
+
+#course-engagement .content > button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}

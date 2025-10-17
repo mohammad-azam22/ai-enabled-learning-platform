@@ -1,0 +1,122 @@
+/* ============================ */
+/* ============Header========== */
+/* ============================ */
+
+.header {
+    width: 100%;
+    height: calc(min(10vh, 8rem));
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-size: 3rem;
+}
+
+/* ============================ */
+/* ============Main============ */
+/* ============================ */
+
+main {
+    height: 90vh;
+}
+
+main .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content h1 {
+    font-size: 2rem;
+}
+
+main .content form {
+    width: 35rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main .content form label {
+    position: absolute;
+    left: -999999px;
+}
+
+main .content form input,
+main .content form select {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-bottom: none;
+    border-width: var(--border-width);
+}
+
+main .content form input:nth-of-type(1) {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main .content form button {
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    cursor: pointer;
+}
+
+main .content form button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .content #message {
+    width: 35rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    opacity: 0.7;
+    display: none;
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+

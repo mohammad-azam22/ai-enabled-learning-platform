@@ -1,0 +1,414 @@
+/* ============================ */
+/* ==========Header============ */
+/* ============================ */
+.header {
+    width: 100%;
+    height: calc(min(10vh, 8rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #header-logo a {
+    font-size: 3rem;
+}
+
+.header .search form {
+    display: flex;
+}
+
+.header .search label {
+    position: absolute;
+    left: -999999px;
+}
+
+.header .search input {
+    width: 40rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.header .search button {
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-left: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    display: grid;
+    cursor: pointer;
+}
+
+.header .search button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+.header .search img {
+    height: 1.5rem;
+    place-self: center;
+    filter: invert(1);
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.header ul li {
+    margin: 0 1rem;
+}
+
+.header ul li button {
+    height: 2rem;
+    padding: 0.1rem;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.header ul li button img,
+.header ul li button svg {
+    height: 3rem;
+    width: 3rem;
+}
+
+.header ul li button img#explore-dropdown {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.2rem 0 0 0.5rem;
+}
+
+/* ============================ */
+/* ==========Main============== */
+/* ============================ */
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+main .content {
+    height: 100%;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .content .left {
+    width: 25vw;
+    min-width: 25vw;
+    border: var(--border-width) solid #000000;
+}
+
+main .content .left .accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .left .accordion form label {
+    position: absolute;
+    left: -999999px;
+}
+
+main .content .left .accordion form input,
+main .content .left .accordion form #query-response-text {
+    width: 100%;   
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+main .content .left .accordion form input {
+    height: 4rem;
+    background-color: var(--color-btn); 
+    border: none;  
+}
+
+main .content .left .accordion form input::placeholder {
+    color: #000000;
+  }
+
+main .content .left .accordion form #query-response-text { 
+    height: 40rem;
+    padding: 3rem;
+    overflow-y: auto;
+    display: block;
+    border: var(--border-width) solid #000000;
+}
+
+main .content .left .accordion form #query-response-text pre {
+    width: fit-content;
+}
+
+main .content .left .accordion button {
+    height: 4rem;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-bottom: var(--border-width) solid #000000;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .content .left .accordion button img{
+    width: 2rem;
+}
+
+main .content .left .accordion button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .content .left .accordion>button {
+    background-color: var(--color-btn);
+}
+
+main .content .right {
+    height: 100%;
+    min-height: 70vh;
+    max-width: 60vw;
+    margin: 6rem;
+    flex-grow: 1;
+
+
+    border: var(--border-width);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+main .content .right .content-div {
+    padding: 4rem;
+}
+
+main .content .right .ql-container {
+    border: none;
+}
+
+main .content .right .ql-container p,
+main .content .right .ql-container span,
+main .content .right .ql-container code,
+main .content .right .ql-container .ql-code-block-container,
+main .content .right .ql-container ol,
+main .content .right .ql-container ul,
+main .content .right .ql-container th,
+main .content .right .ql-container td {
+    font-size: 1.5rem;
+}
+
+main .content .right .ql-container .ql-code-block-container {
+    padding: 1rem;
+    font-family: monospace;
+    text-wrap: nowrap;
+    overflow: auto;
+}
+
+main .content .right .ql-container .ql-code-block-container::-webkit-scrollbar {
+    display: none;
+}
+
+main .content .right .ql-container li {
+    margin-top: 1rem;
+}
+
+main .content .right .ql-container h1,
+main .content .right .ql-container h1>code {
+    font-size: 3rem;
+}
+
+main .content .right .ql-container h2,
+main .content .right .ql-container h2>code {
+    font-size: 2.5rem;
+}
+
+main .content .right .ql-container h3,
+main .content .right .ql-container h3>code {
+    font-size: 2rem;
+}
+
+main .content .right .content-div iframe {
+    width: 70%;
+    margin: 2rem auto;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--border-radius);
+    display: block;
+}
+
+main .content .right .content-div table tbody th,
+main .content .right .content-div table tbody td {
+    padding: 1rem;
+}
+
+main .content .right .content-div .controls {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .content .right .content-div .controls button {
+    height: 6rem;
+    width: 15rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+
+main .content .right .content-div .controls #mark-completed {
+    background-color: var(--color-btn-green);
+}
+
+main .content .right .content-div .controls #mark-completed:hover {
+    background-color: var(--color-btn-green-hover);
+}
+
+main .content .right .content-div .controls #prev,
+main .content .right .content-div .controls #next {
+    background-color: var(--color-btn);
+}
+
+main .content .right .content-div .controls #prev:hover,
+main .content .right .content-div .controls #next:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .content .right .content-div p {
+    font-size: 1.5rem;
+}
+
+main .content .right .content-div h1 {
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+main .content .right .content-div form {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-family: 'Roboto', sans-serif;
+}
+
+main .content .right .content-div form fieldset {
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+main .content .right .content-div form legend {
+    font-size: 1.5rem;
+}
+
+main .content .right .content-div button {
+    height: 4rem;
+    width: 10rem;
+    margin: 2rem 0;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+main .content .right .content-div button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+
+.loader {
+    width: 100%;
+    height: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    position: relative;
+    padding: 1px;
+}
+
+.loader:before {
+    content: '';
+    border: 3px solid #ccedd5;
+    border-radius: 10px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+}
+
+.loader .loaderBar {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    background: #6ccb94;
+    width: 0;
+    animation: borealisBar 3s linear infinite;
+}
+
+@keyframes borealisBar {
+    0% {
+        left: 0%;
+        right: 100%;
+        width: 0%;
+    }
+    10% {
+        left: 0%;
+        right: 75%;
+        width: 25%;
+    }
+    90% {
+        right: 0%;
+        left: 75%;
+        width: 25%;
+    }
+    100% {
+        left: 100%;
+        right: 0%;
+        width: 0%;
+    }
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}

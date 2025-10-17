@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/student_signup_login.css">
+    <!-- Title and Favicon -->
+    <title>Cognito Learn | Student Log In</title>
+</head>
+<body>
+    <header class="header">
+        <div class="content">
+            <div id="header-logo">
+                <a href="/" class="link logo" aria-label="Cognito Learn">Cognito Learn</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <h1>Student Log In</h1>
+            <form aria-label="Login Form" id="student-login-form">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <button type="submit">Log In</button>
+            </form>
+            <p>Don't have an account yet? <a href="/student/signup" class="link">Click here</a> to sign up.</p> 
+            <div id="message"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="content">
+            <div class="left">
+                <ul>
+                    <li><a href="/" class="link">Home</a></li>
+                    <li><a href="" class="link">About</a></li>
+                    <li><a href="" class="link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="" class="link">Help</a></li>
+                    <li><a href="" class="link">Sitemap</a></li>
+                    <li><a href="" class="link">Privacy Policy</a></li>
+                    <li><a href="" class="link">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/student_signup_login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    <!--For JQuery-->
+</body>
+</html>

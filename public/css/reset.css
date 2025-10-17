@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-accent);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-btn);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-btn-hover);
+}

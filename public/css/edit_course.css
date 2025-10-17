@@ -1,0 +1,500 @@
+header {
+    height: calc(max(10vh, 8rem));
+    background-color: var(--color-accent);
+}
+
+header .content {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #header-logo a {
+    font-size: 3rem;
+}
+
+header #header-buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header #header-buttons button {
+    background: none;
+    border: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+}
+
+header #header-buttons img {
+    height: 3rem;
+    width: 3rem;
+    place-self: center;
+}
+
+main {
+    background-color: var(--color-bg);
+}
+
+main .content {
+    width: 80%;
+    height: 100%;
+    margin: 10rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: var(--border-width) solid #000;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+main .accordion {
+    width: 100%;
+}
+
+main .accordion #course-info-panel,
+main .accordion #course-faqs-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .accordion #course-content-panel {
+    display: flex;
+    justify-content: center;
+}
+
+main .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main .controls button {
+    height: 6rem;
+    width: 15rem;
+    margin: 1rem;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+main .controls button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .accordion>button {
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    text-align: left;
+    border: var(--border-width) solid #000000;
+    cursor: pointer;
+}
+
+main .accordion>button:hover {
+    background-color: var(--color-btn);
+}
+
+main .accordion>button:first-of-type {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main .content #main-accordion>.panel {
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+main .accordion>.panel #course-info-form {
+    width: clamp(20rem, 80%, 70rem);
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .accordion>.panel #course-info-form label {
+    position: absolute;
+    left: -9999999px;
+}
+
+main .accordion>.panel #course-info-form input,
+main .accordion>.panel #course-info-form textarea,
+main .accordion>.panel #course-info-form select {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: var(--border-width) solid #000000;
+}
+
+main .accordion>.panel #course-info-form input#title {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main .accordion>.panel #course-info-form input#instructor:hover {
+    cursor: not-allowed;
+}
+
+main .accordion>.panel #course-info-form textarea#description {
+    resize: none;
+    height: 20rem;
+    overflow: hidden;
+    border-bottom: var(--border-width) solid #000000;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+main .accordion #course-content-panel {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .accordion #course-content-panel .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .accordion #course-content-panel .top .units button {
+    height: 6rem;
+    min-width: 8rem;
+    max-width: 12rem;
+    border: var(--border-width) solid #000000;
+    cursor: pointer;
+    background-color: var(--color-btn);
+}
+
+main .accordion #course-content-panel .top .units button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .accordion #course-content-panel .top .units {
+    height: 8rem;
+    padding: 1rem;
+    overflow-x: auto;
+    border: var(--border-width) solid #000000;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    display: flex;
+    gap: 1rem;
+    flex-grow: 1;
+    align-items: center;
+}
+
+main .accordion #course-content-panel .top .units::-webkit-scrollbar {
+    display: none;
+}
+
+main .accordion #course-content-panel .top>button {
+    height: 8rem;
+    aspect-ratio: 1 / 1;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    cursor: pointer;
+    background-color: var(--color-btn);
+}
+
+main .accordion #course-content-panel .top>button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .accordion #course-content-panel .bottom {
+    display: flex;
+    gap: 2rem;
+}
+
+main .accordion #course-content-panel .bottom .left {
+    width: 25%;
+    min-width: 25%;
+}
+
+main .accordion #course-content-panel .bottom .right {
+    flex-grow: 1;
+}
+
+main .accordion #course-content-panel .bottom .left form {
+    border: var(--border-width) solid #000000;
+}
+
+main .accordion #course-content-panel .bottom .left form label {
+    position: absolute;
+    left: -999999px;
+}
+
+main .accordion #course-content-panel .bottom .left form#unit-details {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-bottom: none;
+}
+
+main .accordion #course-content-panel .bottom .left form#unit-details input,
+main .accordion #course-content-panel .bottom .left form#unit-details textarea {
+    width: 100%;
+}
+
+main .accordion #course-content-panel .bottom .left form#unit-details input {
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: var(--border-width) solid #000000;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main .accordion #course-content-panel .bottom .left form#unit-details textarea {
+    height: 20rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    resize: none;
+}
+
+main .accordion #course-content-panel .bottom .left .resources .resource-button {
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000;
+    border-bottom: none;
+    background-color: var(--color-btn);
+    cursor: pointer;
+}
+
+main .accordion #course-content-panel .bottom .left .resources .resource-button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .accordion #course-content-panel .bottom .left form#resource-name-form {
+    display: flex;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+main .accordion #course-content-panel .bottom .left form#resource-name-form input {
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-right: var(--border-width) solid #000000;
+    border-radius: 0 0 0 var(--border-radius);
+    flex-grow: 1;
+}
+
+main .accordion #course-content-panel .bottom .left form#resource-name-form button {
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    display: grid;
+    place-items: center;
+    border-radius: 0 0 var(--border-radius) 0;
+    background-color: var(--color-btn);
+    cursor: pointer;
+}
+
+main .accordion #course-content-panel .bottom .left form#resource-name-form button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .accordion #course-content-panel .bottom .left form#resource-name-form button img {
+    width: 50%;
+}
+
+main .accordion #course-content-panel .right {
+    height: fit-content;
+    min-height: 28rem;
+    padding: 2rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+main .accordion #course-content-panel .right .editors .editor {
+    min-height: 20rem;
+    margin-bottom: 2rem;
+}
+
+main .accordion #course-content-panel .right .editors .video-link {
+    margin: 2rem 0;
+}
+
+main .accordion #course-content-panel .right .editors .video-link .video-link-form label {
+    position: absolute;
+    left: -9999999px;
+}
+
+main .accordion #course-content-panel .right .editors .video-link .video-link-form input {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    border: var(--border-width) solid #000000;
+}
+
+main .accordion #course-content-panel .right .resource-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .accordion #course-content-panel .right .resource-buttons button {
+    height: 6rem;
+    width: 14rem;
+    background-color: var(--color-btn);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+main .accordion #course-content-panel .right .resource-buttons button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main .accordion #course-content-panel .right .resource-buttons #delete-resource-btn {
+    background-color: var(--color-btn-red);
+}
+
+main .accordion #course-content-panel .right .resource-buttons #delete-resource-btn:hover {
+    background-color: var(--color-btn-red-hover);
+}
+
+main .accordion .panel .course-faqs-form {
+    width: clamp(20rem, 80%, 70rem);
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .accordion .panel .course-faqs-form fieldset {
+    width: 70rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .accordion .panel .course-faqs-form label {
+    position: absolute;
+    left: -9999999px;
+}
+
+main .accordion .panel .course-faqs-form input,
+main .accordion .panel .course-faqs-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: var(--border-width) solid #000000;
+}
+
+main .accordion .panel .course-faqs-form input {
+    border-bottom: none;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main .accordion .panel .course-faqs-form textarea {
+    min-height: 10rem;
+    overflow: hidden;
+    resize: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+main .accordion .panel .course-faqs-form button {
+    height: 4rem;
+    width: 4rem;
+    padding: 0.8rem;
+    margin: 1rem;
+    background-color: var(--color-btn-red);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main .accordion .panel .course-faqs-form button:hover {
+    background-color: var(--color-btn-red-hover);
+}
+
+main .accordion .panel .course-faqs-form button img {
+    height: 100%;
+}
+
+main .accordion .panel #add-question {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.8rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background-color: var(--color-btn-green);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main .accordion .panel #add-question:hover {
+    background-color: var(--color-btn-green-hover);
+}
+
+main .accordion .panel #add-question img {
+    height: 100%;
+}
+
+
+.loader {
+    width: 100%;
+    height: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    position: relative;
+    padding: 1px;
+}
+
+.loader:before {
+    content: '';
+    border: 3px solid #ccedd5;
+    border-radius: 10px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+}
+
+.loader .loaderBar {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    background: #6ccb94;
+    width: 0;
+    animation: borealisBar 3s linear infinite;
+}
+
+@keyframes borealisBar {
+    0% {
+        left: 0%;
+        right: 100%;
+        width: 0%;
+    }
+    10% {
+        left: 0%;
+        right: 75%;
+        width: 25%;
+    }
+    90% {
+        right: 0%;
+        left: 75%;
+        width: 25%;
+    }
+    100% {
+        left: 100%;
+        right: 0%;
+        width: 0%;
+    }
+}

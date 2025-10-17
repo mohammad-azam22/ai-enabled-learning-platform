@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/search_page.css">
+    <!-- Title and Favicon -->
+    <title>Cognito Learn | Search Results: </title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="content">
+            <div id="header-logo">
+                <a href="/" class="link logo" aria-label="Cognito Learn">Cognito Learn</a>
+            </div>
+            <div class="search" aria-label="Search Form">
+                <form action="/search">
+                    <label for="query">Search Query:</label>
+                    <input type="text" name="query" placeholder="Search..." id="query" tabindex="0">
+                    <button type="submit" tabindex="1"><img src="/images/search.png" alt="search"></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="search">
+            <div class="content">
+                <h1></h1>
+                <div class="cards"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="content">
+            <div class="left">
+                <ul>
+                    <li><a href="/" class="link">Home</a></li>
+                    <li><a href="/about" class="link">About</a></li>
+                    <li><a href="/contact" class="link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/terms_of_service" class="link">Terms of Service</a></li>
+                    <li><a href="/sitemap" class="link">Sitemap</a></li>
+                    <li><a href="/privacy_policy" class="link">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/search_page.js"></script>
+</body>
+
+</html>

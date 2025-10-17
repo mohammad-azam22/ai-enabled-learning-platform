@@ -1,0 +1,43 @@
+/* 
+1. Primary Color (Calming Blue - #4567b7)
+    Headers: Use for main titles or headers to create a sense of structure and authority.
+    Navigation Bar: Apply to the main navigation elements to enhance usability and maintain brand identity.
+    Footers: Use this color for footer elements to create a cohesive look at the bottom of the page.
+2. Secondary Color (Light and Airy Yellow - #f7dc6f)
+    Background Elements: Use as a background for sections such as announcements, highlights, or featured content, as it draws attention without being overwhelming.
+    Hover Effects: Implement as a hover effect when users mouse over buttons or links to create interactivity.
+    Highlights: Apply for text highlights or to accentuate important information or sections of text.
+3. Accent Color (Vibrant Orange - #e67e73)
+    Buttons: Use for call-to-action buttons (e.g., "Enroll Now," "Start Learning," "Submit") to make them stand out and prompt user interaction.
+    Links: Apply to any important links that require attention, particularly in your content or sidebars.
+    Icons: Use for icons or graphical elements that indicate interactivity or important statuses (like notifications or alerts).
+4. Background Color (Clean White - #ffffff)
+    Main Background: Use this color as the primary background for most of your platform to keep it clean and easy to read.
+    Content Areas: Apply in content sections to ensure that text, images, and videos stand out, enhancing usability and focus.
+5. Text Color (Dark Gray or Navy Blue - #333333 or #1a1d23)
+    Body Text: Use for all main paragraphs and body text to ensure high readability against the white background.
+    Titles and Subheadings: Apply this color for titles and subheadings to provide a strong contrast, making them easy to read and navigate. 
+*/
+
+:root {
+    /* Background Colors */
+    --color-bg: #ffffff;    /* For background */
+    --color-accent: #ccedd5;    /* For header, footer, etc. */
+    --color-btn: #6ccb94;    /* For button */
+    --color-btn-hover: #57a377;    /* For button hover */
+
+    /* Font Colors */
+    --text-color: #000000;
+    --link-color: #424242;
+
+    /* Button Colors */
+    --color-btn-green: #6ffe6f;    /* for call to action button */
+    --color-btn-green-hover: #5dd25d;    /* for call to action button hover */
+    --color-btn-red: #ff6d6d;    /* for danger button */
+    --color-btn-red-hover: #d75a5a;    /* for danger button hover */
+
+    /* Borders */
+    --border-width: 1px;
+    --border-radius: 15px;
+    --shadow: 0px 0px 5px #222222;
+}

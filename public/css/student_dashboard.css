@@ -1,0 +1,387 @@
+/* ============================ */
+/* ==========Dropdown========== */
+/* ============================ */
+.dropdown {
+    position: fixed;
+    top: calc(min(10vh, 8rem));
+    right: 10%;
+    border: var(--border-width) solid #000000;
+    border-top: none;
+    max-height: 60vh;
+    overflow-y: auto;
+    z-index: 1;
+    overscroll-behavior: contain;
+}
+
+.dropdown::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dropdown ul {
+    width: 30rem;
+    list-style: none;
+    background-color: var(--color-bg);
+    font-size: 1.5rem;
+}
+
+.dropdown ul li:hover {
+    background-color: var(--color-btn);
+    color: #ffffff;
+}
+
+.dropdown ul h2 {
+    padding: 0.9rem 0.9rem 0 0.9rem;
+}
+
+.dropdown ul a {
+    width: 100%;
+    display: inline-block;
+    padding: 0.9rem;
+}
+
+/* ============================ */
+/* ==========Header============ */
+/* ============================ */
+.header {
+    width: 100%;
+    height: calc(min(10vh, 8rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #header-logo a {
+    font-size: 3rem;
+}
+
+.header .search form {
+    display: flex;
+}
+
+.header .search label {
+    position: absolute;
+    left: -999999px;
+}
+
+.header .search input {
+    width: 40rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.header .search button {
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-left: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    display: grid;
+    cursor: pointer;
+}
+
+.header .search button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+.header .search img {
+    height: 1.5rem;
+    place-self: center;
+    filter: invert(1);
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.header ul li {
+    margin: 0 1rem;
+}
+
+.header ul li button {
+    height: 2rem;
+    padding: 0.1rem;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.header ul li button img,
+.header ul li button svg {
+    height: 3rem;
+    width: 3rem;
+}
+
+.header ul li button img#explore-dropdown {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.2rem 0 0 0.5rem;
+}
+
+/* ============================ */
+/* ============Main============ */
+/* ============================ */
+
+main {
+    width: 100vw;
+}
+
+#your-courses,
+#recommended,
+#popular {
+    width: 100%;
+    padding-top: 5rem;
+}
+
+#your-courses .content,
+#recommended .content,
+#popular .content {
+    width: 80%;
+    margin: auto;
+}
+
+#your-courses .content h2,
+#recommended .content h2,
+#popular .content h2 {
+    font-size: 2rem;
+}
+
+#your-courses .content .cards,
+#recommended .content .cards,
+#popular .content .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+#your-courses .content .cards .scroll-btn,
+#recommended .content .cards .scroll-btn,
+#popular .content .cards .scroll-btn {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: grid;
+    cursor: pointer;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+}
+
+#your-courses .content .cards .scroll-btn:hover,
+#recommended .content .cards .scroll-btn:hover,
+#popular .content .cards .scroll-btn:hover {
+    background-color: var(--color-btn-hover);
+}
+
+#your-courses .content .cards .scroll-btn img,
+#recommended .content .cards .scroll-btn img,
+#popular .content .cards .scroll-btn img {
+    width: 50%;
+    place-self: center;
+}
+
+#your-courses .content .cards #courses-scroll-right img,
+#recommended .content .cards #courses-scroll-right img,
+#popular .content .cards #courses-scroll-right img {
+    transform: scaleX(-1);
+}
+
+#your-courses .content .cards .list,
+#recommended .content .cards .list,
+#popular .content .cards .list {
+    width: 85%;
+    overflow: hidden;
+}
+
+#your-courses .content .cards .list #your-courses-list,
+#recommended .content .cards .list #recommended-courses-list,
+#popular .content .cards .list #popular-courses-list {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+    transition: transform 0.5s;
+}
+
+#your-courses .content .cards .card,
+#recommended .content .cards .card,
+#popular .content .cards .card {
+    width: calc(max(20vw, 30rem));
+    min-width: calc(max(20vw, 30rem));
+    aspect-ratio: 1 / 1;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+#your-courses .content .cards .card:hover,
+#recommended .content .cards .card:hover,
+#popular .content .cards .card:hover {
+    box-shadow: var(--shadow);
+}
+
+#your-courses .content .cards .card>.top,
+#recommended .content .cards .card>.top,
+#popular .content .cards .card>.top {
+    width: 100%;
+    height: 60%;
+}
+
+#your-courses .content .cards .card>.top img,
+#recommended .content .cards .card>.top img,
+#popular .content .cards .card>.top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#your-courses .content .cards .card>.bottom,
+#recommended .content .cards .card>.bottom,
+#popular .content .cards .card>.bottom {
+    width: 100%;
+    height: 40%;
+    padding: 1rem;
+}
+
+#your-courses .content .cards .card>.bottom .title,
+#recommended .content .cards .card>.bottom .title,
+#popular .content .cards .card>.bottom .title {
+    font-size: 1.5rem;
+}
+
+#your-courses .content .cards .card>.bottom .title,
+#your-courses .content .cards .card>.bottom .instructor,
+#recommended .content .cards .card>.bottom .title,
+#recommended .content .cards .card>.bottom .instructor,
+#popular .content .cards .card>.bottom .title,
+#popular .content .cards .card>.bottom .instructor {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+#recommended .content .cards .card>.bottom .rating,
+#popular .content .cards .card>.bottom .rating {
+    display: flex;
+    gap: 0.3rem;
+}
+
+#your-courses .content .cards .card>.bottom .instructor span,
+#recommended .content .cards .card>.bottom .instructor span,
+#popular .content .cards .card>.bottom .instructor span {
+    border: 1px solid #000;
+    border-radius: 1rem;
+    background-color: var(--color-accent);
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-wrap: nowrap;
+}
+
+#your-courses .content .cards .card>.bottom .progress-container,
+#recommended .content .cards .card>.bottom .progress-container,
+#popular .content .cards .card>.bottom .progress-container {
+    display: flex;
+    align-items: center;
+}
+
+#your-courses .content .cards .card>.bottom .progress {
+    height: 1rem;
+    width: 60%;
+    margin: 0 0.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+#your-courses .content .cards .card>.bottom .progress .progress-bar {
+    height: 100%;
+    background-color: var(--color-btn);
+    border-radius: var(--border-radius);
+}
+
+#your-courses .content .cards .card>.bottom .progress-container .lessons,
+#recommended .content .cards .card>.bottom .progress-container .lessons,
+#popular .content .cards .card>.bottom .progress-container .lessons {
+    margin-left: auto;
+}
+
+#activity {
+    width: 100%;
+    height: 40rem;
+    padding-top: 5rem;
+}
+
+#activity .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+#activity .content h2 {
+    font-size: 2rem;
+}
+
+#activity .content #graph-container {
+    width: 100%;
+    height: 100%;
+}
+
+#activity .content #graph-container #_ABSTRACT_RENDERER_ID_0+g text:nth-child(2),
+#activity .content #graph-container #_ABSTRACT_RENDERER_ID_0+g text:nth-child(3),
+#activity .content #graph-container #_ABSTRACT_RENDERER_ID_0+g text:nth-child(4),
+#activity .content #graph-container #_ABSTRACT_RENDERER_ID_0 ~ g:nth-child(4) {
+    display: none !important;
+}
+
+#activity .content #graph-container rect {
+    rx: 5;
+    ry: 5;
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}

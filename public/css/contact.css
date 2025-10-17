@@ -1,0 +1,130 @@
+/* ============================ */
+/* ==========Header============ */
+/* ============================ */
+.header {
+    width: 100%;
+    height: calc(min(10vh, 8rem));
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    color: var(--text-color);
+    font-size: 3rem;
+}
+
+/* ============================ */
+/* ==========About============= */
+/* ============================ */
+#contact {
+    height: calc(min(100vh, 70rem));
+    background-color: var(--color-bg);
+}
+
+#contact .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .content h1 {
+    font-size: 4rem;
+}
+
+#contact .content form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .content form label {
+    position: absolute;
+    left: -99999px;
+}
+
+#contact .content form input,
+#contact .content form textarea {
+    width: clamp(25rem,35vw,55rem);
+    padding: 1rem;
+    margin: 1rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+#contact .content form input {
+    height: 4rem;    
+}
+
+#contact .content form input[type="email"] {
+    width: -webkit-fill-available;
+}
+
+#contact .content form textarea {
+    height: 20rem;
+    max-height: 20rem;
+    resize: none;
+    overflow: hidden;
+}
+
+#contact .content form div {
+    display: flex;
+    align-items: center;
+}
+
+#contact .content form button {
+    width: 15rem;
+    height: 4rem;
+    margin: 1rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    background-color: var(--color-btn);
+    cursor: pointer;
+}
+
+#contact .content form div button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}

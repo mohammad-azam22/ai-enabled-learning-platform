@@ -1,0 +1,81 @@
+/* ============================ */
+/* ==========Header============ */
+/* ============================ */
+.header {
+    width: 100%;
+    height: calc(min(10vh, 8rem));
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    color: var(--text-color);
+    font-size: 3rem;
+}
+
+/* ============================ */
+/* ==========About============= */
+/* ============================ */
+#about {
+    height: calc(min(100vh, 70rem));
+    background-color: var(--color-bg);
+}
+
+#about .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .content h1 {
+    font-size: 4rem;
+}
+
+#about .content p {
+    width: 75%;
+    text-align: justify;
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}

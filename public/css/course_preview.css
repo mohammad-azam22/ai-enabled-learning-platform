@@ -1,0 +1,394 @@
+header {
+    height: calc(max(10vh, 8rem));
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header .content {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #header-logo a {
+    font-size: 3rem;
+}
+
+header #header-buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header #header-buttons button {
+    background: none;
+    border: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+}
+
+header #header-buttons img {
+    height: 3rem;
+    width: 3rem;
+    place-self: center;
+}
+
+main {
+    background-color: var(--color-bg);
+}
+
+main .content {
+    width: 80%;
+    margin: 10rem auto;
+    height: 100%;
+    overflow: hidden;
+    border: var(--border-width) solid #000;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+main #poster {
+    height: 50rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+main #poster img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.2;
+}
+
+main #poster .course-info {
+    position: absolute;
+    bottom: 4rem;
+    left: 8rem;
+}
+
+
+main #poster .course-info h1 {
+    font-size: 5rem;
+}
+
+main #poster .course-info .stars-total {
+    width: 20rem;
+    margin-top: 1rem;
+    position: absolute;
+    display: flex;
+}
+
+main #poster .course-info .stars-received {
+    margin-top: 1rem;
+    overflow: hidden;
+    display: flex;
+}
+
+main #poster .course-info .stars-received svg {
+    min-width: 4rem;
+    min-height: 3rem;
+}
+
+main #poster .course-info .enroll {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main #poster .course-info .enroll span {
+    font-weight: 900;
+}
+
+main #poster .course-info .enroll button {
+    width: 100%;
+    max-width: 20rem;
+    height: 4rem;
+    margin: 2rem 0;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    background-color: var(--color-btn);
+    cursor: pointer;
+}
+
+main #poster .course-info .enroll button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main #description {
+    padding: 8rem 8rem 0 8rem;
+}
+
+main #description h2 {
+    font-size: 2rem;
+}
+
+main #description p {
+    text-align: justify;
+}
+
+main #course-content {
+    padding: 8rem 8rem 0rem 8rem;
+}
+
+main #course-content h2 {
+    font-size: 2rem;
+}
+
+main #course-content .accordion button {
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    text-align: left;
+    border: var(--border-width) solid #000000;
+    cursor: pointer;
+}
+
+main #course-content .accordion button:first-of-type {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main #course-content .accordion button:hover {
+    background-color: var(--color-btn);
+}
+
+main #course-content .accordion .panel {
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+main #faqs {
+    padding: 8rem 8rem 0rem 8rem;
+}
+
+main #faqs h2 {
+    font-size: 2rem;
+}
+
+main #faqs .accordion button {
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    text-align: left;
+    border: var(--border-width) solid #000000;
+    cursor: pointer;
+}
+
+main #faqs .accordion button:hover {
+    background-color: var(--color-btn);
+}
+
+main #faqs .accordion button:first-of-type {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main #faqs .accordion .panel {
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+main #reviews {
+    padding: 8rem 8rem 8rem 8rem;
+}
+
+main #reviews h2 {
+    font-size: 2rem;
+}
+
+main #reviews>button {
+    width: 10rem;
+    height: 4rem;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main #reviews>button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main #reviews .reviews-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+main #reviews .reviews-container .left {
+    min-width: 25%;
+}
+
+main #reviews .reviews-container .left .top {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+main #reviews .reviews-container .left .top span {
+    font-size: 3rem;
+}
+
+main #reviews .reviews-container .left .bottom {
+    width: 100%;
+}
+
+main #reviews .reviews-container .left .bottom .container {
+    display: flex;
+    align-items: center;
+}
+
+main #reviews .reviews-container .left .bottom .star-container {
+    width: 50%;
+    height: 1rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin: 0.5rem 1.5rem;
+}
+
+main #reviews .reviews-container .left .bottom .rating {
+    height: 100%;
+    max-width: 100%;
+    background-color: var(--color-btn);
+    border-radius: var(--border-radius);
+}
+
+main #reviews .reviews-container>.right {
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    flex-grow: 1;
+}
+
+main #reviews .reviews-container .right .write-review {
+    margin: 2rem;
+    padding: 1rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+main #reviews .reviews-container .right #write-review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+main #reviews .reviews-container .right #write-review-form label {
+    position: absolute;
+    left: -999999px;
+}
+
+main #reviews .reviews-container .right #write-review-form .select-stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main #reviews .reviews-container .right #write-review-form .select-stars input {
+    width: 50%;
+}
+
+main #reviews .reviews-container .right #write-review-form textarea {
+    height: 15rem;
+    max-height: 15rem;
+    padding: 1rem;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    resize: none;
+    overflow: hidden;
+}
+
+main #reviews .reviews-container .right #write-review-form #buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+main #reviews .reviews-container .right #write-review-form #submit-review {
+    width: 10rem;
+    height: 4rem;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main #reviews .reviews-container .right #write-review-form #submit-review:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main #reviews .reviews-container .right #write-review-form #delete-review {
+    width: 10rem;
+    height: 4rem;
+    background-color: var(--color-btn-red);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main #reviews .reviews-container .right #write-review-form #delete-review:hover {
+    background-color: var(--color-btn-red-hover);
+}
+
+main #reviews .reviews-container .right #load-reviews {
+    width: 10rem;
+    height: 4rem;
+    margin: 1rem;
+    display: block;
+    margin: 2rem auto;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+main #reviews .reviews-container .right #load-reviews:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main #reviews .reviews-container>.right .review {
+    min-height: 15rem;
+    margin: 2rem;
+    display: flex;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+}
+
+main #reviews .reviews-container>.right .review .left {
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main #reviews .reviews-container>.right .review .vr {
+    border-left: var(--border-width) solid #000000;
+    min-height: 12rem;
+}
+
+main #reviews .reviews-container>.right .review .right {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main #reviews .reviews-container>.right .review .right .rating {
+    display: flex;
+    align-items: center;
+    height: 20%;
+}
+
+.checked #SVGRepo_iconCarrier path {
+    fill: #ED8A19 !important;
+}

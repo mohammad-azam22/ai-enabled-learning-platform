@@ -1,0 +1,351 @@
+/* ============================ */
+/* ==========Dropdown========== */
+/* ============================ */
+.dropdown {
+    position: fixed;
+    top: calc(max(10vh, 7rem));
+    right: 10%;
+    border: var(--border-width) solid #000000;
+    border-top: none;
+    max-height: 60vh;
+    overflow-y: auto;
+    z-index: 1;
+    overscroll-behavior: contain;
+}
+
+.dropdown::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dropdown ul {
+    width: 30rem;
+    list-style: none;
+    background-color: var(--color-bg);
+    font-size: 1.5rem;
+}
+
+.dropdown ul li:hover {
+    background-color: var(--color-btn);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.dropdown ul h2 {
+    padding: 0.9rem 0.9rem 0 0.9rem;
+}
+
+.dropdown ul a {
+    width: 100%;
+    display: inline-block;
+    padding: 0.9rem;
+}
+
+/* ============================ */
+/* ==========Header============ */
+/* ============================ */
+
+header {
+    height: calc(max(10vh, 7rem));
+    background-color: var(--color-accent);
+}
+
+header .content {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #header-logo a {
+    font-size: 3rem;
+}
+
+header #header-buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header #header-buttons button {
+    height: 4rem;
+    aspect-ratio: 1 / 1;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    background: none;
+    cursor: pointer;
+}
+
+header #header-buttons img {
+    height: 3rem;
+    width: 3rem;
+    place-self: center;
+}
+
+/* =========================== */
+/* =========Your Courses====== */
+/* =========================== */
+
+main .content {
+    width: 80%;
+    padding-top: 3rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 3fr 3fr;
+    grid-template-rows: repeat(3, 19rem);
+    gap: 1.5rem;
+}
+
+main #your-courses {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+main #your-courses h1 {
+    font-size: 2rem;
+}
+
+main #your-courses .cards {
+    width: 100%;
+    height: 90%;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: grid;
+    gap: 2rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+}
+
+main #your-courses .cards .scrollable {
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main #your-courses .cards .scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+main #your-courses .cards .card {
+    height: 12rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border: var(--border-width) solid #000;
+    border-radius: var(--border-radius);
+}
+
+main #your-courses .cards .card:hover {
+    background-color: var(--color-btn);
+}
+
+main #your-courses .cards .left {
+    width: 20%;
+    min-width: 20%;
+    height: 100%;
+    display: grid;
+}
+
+main #your-courses .cards svg {
+    place-self: center;
+}
+
+main #your-courses .cards .mid {
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+main #your-courses .cards .right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+}
+
+main #your-courses .cards .right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+}
+
+main #your-courses .cards .right button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main #your-courses .cards .right img {
+    height: 2rem;
+    width: 2rem;
+    place-self: center;
+}
+
+/* =========================== */
+/* ===========Info============ */
+/* =========================== */
+main #info {
+    margin-top: 4rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+main #info .left span,
+main #info .right span {
+    display: block;
+    text-align: center;
+}
+
+main #info .left span:nth-of-type(1),
+main #info .right span:nth-of-type(1) {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+
+main #info .vert-line {
+    height: 70%;
+    border-left: var(--border-width) solid #000000;
+}
+
+
+/* =========================== */
+/* =========New Course======== */
+/* =========================== */
+main #new-course {
+    margin-top: 4rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+main #new-course span {
+    font-size: 2rem;
+}
+
+main #new-course button {
+    width: 25rem;
+    height: 6rem;
+    font-size: 1.5rem;
+    background: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+main #new-course button:hover {
+    background: var(--color-btn-hover);
+}
+
+/* =========================== */
+/* ==========Charts=========== */
+/* =========================== */
+
+main #charts {
+    height: 95%;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;   
+}
+
+main #charts .left {
+    width: 30%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main #charts .left form {
+    height: 100%;
+    width: 100%;
+}
+
+main #charts .left label {
+    position: absolute;
+    left: -999999px;
+}
+
+main #charts .left form select,
+main #charts .left button {
+    width: 100%;
+    height: 5rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+main #charts .left button {
+    background-color: var(--color-btn);
+}
+
+main #charts .left button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+main #charts .right {
+    height: 100%;
+    width: 70%;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}

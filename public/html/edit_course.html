@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/utilities.css">
+    <link rel="stylesheet" type="text/css" href="/css/variables.css">
+    <link rel="stylesheet" type="text/css" href="/css/edit_course.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+    <!-- Title and Favicon -->
+    <title>Cognito Learn | Edit Course</title>
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <div id="header-logo">
+                <a href="/" class="link logo" aria-label="Cognito Learn">Cognito Learn</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="accordion" id="main-accordion">
+                <button id="course-info-btn" class="panel-btn">Course Information</button>
+                <div class="panel" id="course-info-panel">
+                    <form id="course-info-form">
+                        <label for="title">Course Title</label>
+                        <input type="text" name="title" id="title" placeholder="Course Title..." minlength="1" required>
+                        <label for="instructor">Instructor</label>
+                        <input type="text" name="instructor" id="instructor" placeholder="Instructor..." minlength="1" required disabled>
+                        <label for="poster">Poster Image</label>
+                        <input type="text" name="poster" id="poster" placeholder="Poster Image Link..." minlength="1"
+                            required>
+                        <label for="price">Price</label>
+                        <label for="difficulty">Difficulty</label>
+                        <select name="difficulty" id="difficulty">
+                            <option value="" disabled selected hidden>Difficulty Level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                        <input type="number" min="0" name="course-price" id="price" placeholder="Price (in USD)..."
+                            required>
+                        <label for="tags">Tags</label>
+                        <input type="text" name="tags" id="tags" placeholder="Comma separated tags..." minlength="1"
+                        required>
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" placeholder="Course Description..." minlength="1"
+                            maxlength="500" required></textarea>
+                    </form>
+                </div>
+                <button id="course-content-btn" class="panel-btn">Course Content</button>
+                <div class="panel" id="course-content-panel">
+                    <div class="top">
+                        <button id="add-unit-btn">Add Unit</button>
+                        <div class="units"></div>
+                    </div>
+                    <div class="bottom">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <button id="course-faqs-btn" class="panel-btn">Frequently Asked Questions</button>
+                <div class="panel" id="course-faqs-panel">
+                    <button id="add-question" onclick=add_faq()><img src="/images/add.png" alt="Add question"></button>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick=go_back()>Go Back</button>
+                <button onclick=update_course()>Save Progress</button>
+                <button onclick=publish_course(true)>Publish Course</button>
+                <button onclick=publish_course(false)>Unpublish Course</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script src="/js/edit_course.js"></script>
+    <script src="/js/quill.js"></script>
+    
+</body>
+
+</html>

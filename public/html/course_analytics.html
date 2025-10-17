@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/course_analytics.css">
+    <!-- Title and Favicon -->
+    <title>Cognito Learn | Analytics</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="content">
+            <div id="header-logo">
+                <a href="/" class="link logo" aria-label="Cognito Learn">Cognito Learn</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="course-info">
+            <div class="content">
+                <h2>Course Information</h2>
+                <table id="course-info-table">
+                    <tbody>
+                        <tr>
+                            <th>Course Title</th>
+                            <td id="course-title"></td>
+                        </tr>
+                        <tr>
+                            <th>Price</th>
+                            <td id="course-price"></td>
+                        </tr>
+                        <tr>
+                            <th>Created</th>
+                            <td id="course-created-at"></td>
+                        </tr>
+                        <tr>
+                            <th>Last updated</th>
+                            <td id="course-updated-at"></td>
+                        </tr>
+                    </tbody>
+                </table>         
+            </div>
+        </section>
+        <section id="student-demographics">
+            <div class="content">     
+                <h2>Student Demographics</h2>
+                <div class="chart">
+                    <div id="gender-dist">
+                        <!-- Pie chart of gender dist -->
+                    </div>
+                    <div id="age-dist">
+                        <!-- Pie chart of age dist -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="course-engagement">
+            <div class="content">
+                <h2>Course Engagement</h2>
+                <div class="chart">
+                    <div id="course-comp">
+                        <!-- Pie chart of course completion rate -->
+                    </div>
+                    <div id="review-rating">
+                        <!-- Pie chart of review ratings -->
+                    </div>
+                </div>    
+                <button type="button" onclick="history.back();">Back</button>                 
+            </div>
+        </section>    
+    </main>
+    <footer class="footer">
+        <div class="content">
+            <div class="left">
+                <ul>
+                    <li><a href="/" class="link">Home</a></li>
+                    <li><a href="/about" class="link">About</a></li>
+                    <li><a href="/contact" class="link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/terms_of_service" class="link">Terms of Service</a></li>
+                    <li><a href="/sitemap" class="link">Sitemap</a></li>
+                    <li><a href="/privacy_policy" class="link">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/course_analytics.js"></script>
+</body>
+
+</html>

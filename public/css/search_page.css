@@ -1,0 +1,186 @@
+/* ============================ */
+/* ==========Header============ */
+/* ============================ */
+.header {
+    width: 100%;
+    height: calc(min(10vh, 8rem));
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header #header-logo {
+    flex: 1;
+}
+
+.header .logo {
+    color: var(--text-color);
+    font-size: 3rem;
+}
+
+.header .search {
+    flex: 2;
+}
+
+.header .search form {
+    display: flex;
+}
+
+.header .search label {
+    position: absolute;
+    left: -999999px;
+}
+
+.header .search input {
+    width: 40rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.header .search button {
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--color-btn);
+    border: var(--border-width) solid #000000;
+    border-left: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    display: grid;
+    cursor: pointer;
+}
+
+.header .search button:hover {
+    background-color: var(--color-btn-hover);
+}
+
+.header .search img {
+    height: 1.5rem;
+    place-self: center;
+    filter: invert(1);
+}
+
+
+/* ============================ */
+/* ==========Search============ */
+/* ============================ */
+#search {
+    margin: 6rem 0;
+    min-height: calc(min(100vh, 70rem));
+    background-color: var(--color-bg);
+}
+
+#search .content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#search .content h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#search .content .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 6rem;
+}
+
+#search .content .cards .card {
+    width: calc(max(20vw, 30rem));
+    min-width: calc(max(20vw, 30rem));
+    aspect-ratio: 1 / 1;
+    border: var(--border-width) solid #000000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+#search .content .cards .card:hover {
+    box-shadow: var(--shadow);
+}
+
+#search .content .cards .card>.top {
+    width: 100%;
+    height: 60%;
+}
+
+#search .content .cards .card>.top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#search .content .cards .card>.bottom {
+    width: 100%;
+    height: 40%;
+    padding: 1rem;
+}
+
+#search .content .cards .card>.bottom .title {
+    font-size: 1.5rem;
+}
+
+#search .content .cards .card>.bottom .title,
+#search .content .cards .card>.bottom .instructor {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+#search .content .cards .card>.bottom .rating {
+    display: flex;
+    gap: 0.3rem;
+}
+
+#search .content .cards .card>.bottom .instructor span {
+    border: 1px solid #000;
+    border-radius: 1rem;
+    background-color: var(--color-accent);
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-wrap: nowrap;
+}
+
+/* ============================ */
+/* ============Footer========== */
+/* ============================ */
+.footer {
+    width: 100%;
+    height: calc(min(20vh, 11rem));
+    color: var(--text-color);
+    background-color: var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer .content {
+    width: 80%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer .content .left ul,
+.footer .content .right ul {
+    list-style: none;
+}
