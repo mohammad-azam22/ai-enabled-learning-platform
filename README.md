@@ -47,9 +47,10 @@ Ensure you have Node.js installed. Then run:
 3. **Configure environment (if applicable)**<br>
 Create a .env file with your configuration variables (e.g. database URL, secret keys, API credentials). Example:
    ```env
-   PORT=3000
-   DB_URI=mongodb://localhost:27017/your-db-name
-   JWT_SECRET=your_jwt_secret
+   BACKEND_PORT = 3000
+   MONGODB_DB_NAME = "cognito_learn"
+   MONGODB_URI = "mongodb://127.0.0.1:27017/"
+   EXPRESS_SESSION_KEY = "YourSessionKey"
    ```
 
 4. **Run the server**
@@ -100,3 +101,4 @@ If you are planning a larger or more complex change — please open an issue fir
 ## License
 
 This project is licensed under the MIT License — see the LICENSE file for details.
+
