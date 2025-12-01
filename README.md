@@ -45,7 +45,7 @@ Ensure you have Node.js installed. Then run:
    ```
 
 3. **Configure environment (if applicable)**<br>
-Create a .env file with your configuration variables (e.g. database URL, secret keys, API credentials). Example:
+Create a .env file with your configuration variables.
    ```env
    BACKEND_PORT = 3000
    MONGODB_DB_NAME = "cognito_learn"
@@ -101,4 +101,5 @@ If you are planning a larger or more complex change — please open an issue fir
 ## License
 
 This project is licensed under the MIT License — see the LICENSE file for details.
+
 
